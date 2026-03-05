@@ -1,6 +1,6 @@
 #!/usr/bin/perl -w
 
-#indx#	sshot.pl - Trivial program SShot written in plPerl
+#indx#	sshot.pl - Trivial program SShot written in Perl
 #@HDR@	$Id$
 #@HDR@
 #@HDR@	Copyright (c) 2026 Christopher Caldwell (Christopher.M.Caldwell0@gmail.com)
