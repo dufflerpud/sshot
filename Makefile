@@ -27,7 +27,7 @@
 #
 #hist#	2026-03-05 - Christopher.M.Caldwell0@gmail.com - Created
 ########################################################################
-#doc#	Makefile - Compile sshot versions where necessary
+#doc#	Makefile - Compile sshot versions where necessary.
 #doc#	Also commands for bringing various compilers and interpreters
 #doc#	onto a Fedora Core machine.  That is not intended to be
 #doc#	comprehensive, only a place to start.

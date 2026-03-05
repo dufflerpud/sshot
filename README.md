@@ -83,104 +83,104 @@ I did NOT say they were written well.  --Chris Caldwell, 11/14/2022
 
 <hr>
 
-<table src="Makefile sshot.*"><tr><th align=left><a href='#dt_87O152XOV'>Makefile</a></th><td>Compile sshot versions where necessary</td></tr>
-<tr><th align=left><a href='#dt_87O152XOW'>sshot.adb</a></th><td>Trivial program SShot written in ADA</td></tr>
-<tr><th align=left><a href='#dt_87O152XOX'>sshot.alg</a></th><td>Trivial program SShot written in Algol-68</td></tr>
-<tr><th align=left><a href='#dt_87O152XOY'>sshot.bas</a></th><td>Trivial program SShot written in YA-Basic</td></tr>
-<tr><th align=left><a href='#dt_87O152XOZ'>sshot.cob</a></th><td>Trivial program SShot written in Cobol</td></tr>
-<tr><th align=left><a href='#dt_87O152XOa'>sshot.cpp</a></th><td>Trivial program SShot written in C++</td></tr>
-<tr><th align=left><a href='#dt_87O152XOb'>sshot.gcc</a></th><td>Trivial program SShot written in gcc</td></tr>
-<tr><th align=left><a href='#dt_87O152XOc'>sshot.go</a></th><td>Trivial program SShot written in Go</td></tr>
-<tr><th align=left><a href='#dt_87O152XOd'>sshot.hs</a></th><td>Trivial program SShot written in Haskell</td></tr>
-<tr><th align=left><a href='#dt_87O152XOe'>sshot.java</a></th><td>Trivial program SShot written in java</td></tr>
-<tr><th align=left><a href='#dt_87O152XOf'>sshot.js</a></th><td>Trivial program SShot written in Javascript</td></tr>
-<tr><th align=left><a href='#dt_87O152XOg'>sshot.lsp</a></th><td>Trivial program SShot written in Lisp</td></tr>
-<tr><th align=left><a href='#dt_87O152XOh'>sshot.pas</a></th><td>Trivial program SShot written in Pascal</td></tr>
-<tr><th align=left><a href='#dt_87O152XOi'>sshot.pil</a></th><td>Trivial program SShot written in pil</td></tr>
-<tr><th align=left><a href='#dt_87O152XOj'>sshot.pl</a></th><td>Trivial program SShot written in Perl</td></tr>
-<tr><th align=left><a href='#dt_87O152XOk'>sshot.py</a></th><td>Trivial program SShot written in Python</td></tr>
-<tr><th align=left><a href='#dt_87O152XOl'>sshot.rs</a></th><td>Trivial program SShot written in Rust</td></tr>
-<tr><th align=left><a href='#dt_87O152XOm'>sshot.ruby</a></th><td>Trivial program SShot written in Ruby</td></tr>
-<tr><th align=left><a href='#dt_87O152XOn'>sshot.s</a></th><td>Trivial program SShot written in GNU assembler</td></tr>
-<tr><th align=left><a href='#dt_87O152XOo'>sshot.scala</a></th><td>Trivial program SShot written in Scala</td></tr>
-<tr><th align=left><a href='#dt_87O152XOp'>sshot.sh</a></th><td>Trivial program SShot written in Bourne-Shell/BASH</td></tr>
-<tr><th align=left><a href='#dt_87O152XOq'>sshot.swift</a></th><td>Trivial program SShot written in Swift</td></tr>
-<tr><th align=left><a href='#dt_87O152XOr'>sshot.tcl</a></th><td>Trivial program SShot written in TCL</td></tr></table>
+<table src="Makefile sshot.*"><tr><th align=left><a href='#dt_87O1ABQWf'>Makefile</a></th><td>Compile sshot versions where necessary</td></tr>
+<tr><th align=left><a href='#dt_87O1ABQWg'>sshot.adb</a></th><td>Trivial program SShot written in ADA</td></tr>
+<tr><th align=left><a href='#dt_87O1ABQWh'>sshot.alg</a></th><td>Trivial program SShot written in Algol-68</td></tr>
+<tr><th align=left><a href='#dt_87O1ABQWi'>sshot.bas</a></th><td>Trivial program SShot written in YA-Basic</td></tr>
+<tr><th align=left><a href='#dt_87O1ABQWj'>sshot.cob</a></th><td>Trivial program SShot written in Cobol</td></tr>
+<tr><th align=left><a href='#dt_87O1ABQWk'>sshot.cpp</a></th><td>Trivial program SShot written in C++</td></tr>
+<tr><th align=left><a href='#dt_87O1ABQWl'>sshot.gcc</a></th><td>Trivial program SShot written in gcc</td></tr>
+<tr><th align=left><a href='#dt_87O1ABQWm'>sshot.go</a></th><td>Trivial program SShot written in Go</td></tr>
+<tr><th align=left><a href='#dt_87O1ABQWn'>sshot.hs</a></th><td>Trivial program SShot written in Haskell</td></tr>
+<tr><th align=left><a href='#dt_87O1ABQWo'>sshot.java</a></th><td>Trivial program SShot written in java</td></tr>
+<tr><th align=left><a href='#dt_87O1ABQWp'>sshot.js</a></th><td>Trivial program SShot written in Javascript</td></tr>
+<tr><th align=left><a href='#dt_87O1ABQWq'>sshot.lsp</a></th><td>Trivial program SShot written in Lisp</td></tr>
+<tr><th align=left><a href='#dt_87O1ABQWr'>sshot.pas</a></th><td>Trivial program SShot written in Pascal</td></tr>
+<tr><th align=left><a href='#dt_87O1ABQWs'>sshot.pil</a></th><td>Trivial program SShot written in pil</td></tr>
+<tr><th align=left><a href='#dt_87O1ABQWt'>sshot.pl</a></th><td>Trivial program SShot written in Perl</td></tr>
+<tr><th align=left><a href='#dt_87O1ABQWu'>sshot.py</a></th><td>Trivial program SShot written in Python</td></tr>
+<tr><th align=left><a href='#dt_87O1ABQWv'>sshot.rs</a></th><td>Trivial program SShot written in Rust</td></tr>
+<tr><th align=left><a href='#dt_87O1ABQWw'>sshot.ruby</a></th><td>Trivial program SShot written in Ruby</td></tr>
+<tr><th align=left><a href='#dt_87O1ABQWx'>sshot.s</a></th><td>Trivial program SShot written in GNU assembler</td></tr>
+<tr><th align=left><a href='#dt_87O1ABQWy'>sshot.scala</a></th><td>Trivial program SShot written in Scala</td></tr>
+<tr><th align=left><a href='#dt_87O1ABQWz'>sshot.sh</a></th><td>Trivial program SShot written in Bourne-Shell/BASH</td></tr>
+<tr><th align=left><a href='#dt_87O1ABQX0'>sshot.swift</a></th><td>Trivial program SShot written in Swift</td></tr>
+<tr><th align=left><a href='#dt_87O1ABQX1'>sshot.tcl</a></th><td>Trivial program SShot written in TCL</td></tr></table>
 
 <hr>
 
 <div id=docs>
 
-## <a id='dt_87O152XOV'>Makefile</a>
-Compile sshot versions where necessary
+## <a id='dt_87O1ABQWf'>Makefile</a>
+Compile sshot versions where necessary.
 Also commands for bringing various compilers and interpreters
 onto a Fedora Core machine.  That is not intended to be
 comprehensive, only a place to start.
 
-## <a id='dt_87O152XOW'>sshot.adb</a>
+## <a id='dt_87O1ABQWg'>sshot.adb</a>
 Trivial program SShot written in ADA
 
-## <a id='dt_87O152XOX'>sshot.alg</a>
+## <a id='dt_87O1ABQWh'>sshot.alg</a>
 Trivial program SShot written in Algol-68
 
-## <a id='dt_87O152XOY'>sshot.bas</a>
+## <a id='dt_87O1ABQWi'>sshot.bas</a>
 Trivial program SShot written in YA-Basic
 
-## <a id='dt_87O152XOZ'>sshot.cob</a>
+## <a id='dt_87O1ABQWj'>sshot.cob</a>
 Trivial program SShot written in Cobol
 
-## <a id='dt_87O152XOa'>sshot.cpp</a>
+## <a id='dt_87O1ABQWk'>sshot.cpp</a>
 Trivial program SShot written in C++
 
-## <a id='dt_87O152XOb'>sshot.gcc</a>
+## <a id='dt_87O1ABQWl'>sshot.gcc</a>
 Trivial program SShot written in gcc
 
-## <a id='dt_87O152XOc'>sshot.go</a>
+## <a id='dt_87O1ABQWm'>sshot.go</a>
 Trivial program SShot written in Go
 
-## <a id='dt_87O152XOd'>sshot.hs</a>
+## <a id='dt_87O1ABQWn'>sshot.hs</a>
 Trivial program SShot written in Haskell
 
-## <a id='dt_87O152XOe'>sshot.java</a>
+## <a id='dt_87O1ABQWo'>sshot.java</a>
 Trivial program SShot written in java
 
-## <a id='dt_87O152XOf'>sshot.js</a>
+## <a id='dt_87O1ABQWp'>sshot.js</a>
 Trivial program SShot written in Javascript
 
-## <a id='dt_87O152XOg'>sshot.lsp</a>
+## <a id='dt_87O1ABQWq'>sshot.lsp</a>
 Trivial program SShot written in Lisp
 
-## <a id='dt_87O152XOh'>sshot.pas</a>
+## <a id='dt_87O1ABQWr'>sshot.pas</a>
 Trivial program SShot written in Pascal
 
-## <a id='dt_87O152XOi'>sshot.pil</a>
+## <a id='dt_87O1ABQWs'>sshot.pil</a>
 Trivial program SShot written in pil
 
-## <a id='dt_87O152XOj'>sshot.pl</a>
+## <a id='dt_87O1ABQWt'>sshot.pl</a>
 Trivial program SShot written in Perl
 
-## <a id='dt_87O152XOk'>sshot.py</a>
+## <a id='dt_87O1ABQWu'>sshot.py</a>
 Trivial program SShot written in Python
 
-## <a id='dt_87O152XOl'>sshot.rs</a>
+## <a id='dt_87O1ABQWv'>sshot.rs</a>
 Trivial program SShot written in Rust
 
-## <a id='dt_87O152XOm'>sshot.ruby</a>
+## <a id='dt_87O1ABQWw'>sshot.ruby</a>
 Trivial program SShot written in Ruby
 
-## <a id='dt_87O152XOn'>sshot.s</a>
+## <a id='dt_87O1ABQWx'>sshot.s</a>
 Trivial program SShot written in GNU assembler
 
-## <a id='dt_87O152XOo'>sshot.scala</a>
+## <a id='dt_87O1ABQWy'>sshot.scala</a>
 Trivial program SShot written in Scala
 
-## <a id='dt_87O152XOp'>sshot.sh</a>
+## <a id='dt_87O1ABQWz'>sshot.sh</a>
 Trivial program SShot written in Bourne-Shell/BASH
 
-## <a id='dt_87O152XOq'>sshot.swift</a>
+## <a id='dt_87O1ABQX0'>sshot.swift</a>
 Trivial program SShot written in Swift
 
-## <a id='dt_87O152XOr'>sshot.tcl</a>
+## <a id='dt_87O1ABQX1'>sshot.tcl</a>
 Trivial program SShot written in TCL</div>
 
 <hr>
@@ -190,6 +190,7 @@ found in the 'table src=' line above and then rerun github_readme in
 this directory.
 
 Similarly, if you remove files, re-run github_readme.
+
 
 
 
