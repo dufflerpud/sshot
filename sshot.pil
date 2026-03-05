@@ -1,0 +1,137 @@
+!indx#	sshot.pil - Trivial program SShot written in pil
+!@HDR@	$Id$
+!@HDR@
+!@HDR@	Copyright (c) 2026 Christopher Caldwell (Christopher.M.Caldwell0@gmail.com)
+!@HDR@
+!@HDR@	Permission is hereby granted, free of charge, to any person
+!@HDR@	obtaining a copy of this software and associated documentation
+!@HDR@	files (the "Software"), to deal in the Software without
+!@HDR@	restriction, including without limitation the rights to use,
+!@HDR@	copy, modify, merge, publish, distribute, sublicense, and/or
+!@HDR@	sell copies of the Software, and to permit persons to whom
+!@HDR@	the Software is furnished to do so, subject to the following
+!@HDR@	conditions:
+!@HDR@	
+!@HDR@	The above copyright notice and this permission notice shall be
+!@HDR@	included in all copies or substantial portions of the Software.
+!@HDR@	
+!@HDR@	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY
+!@HDR@	KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
+!@HDR@	WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE
+!@HDR@	AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+!@HDR@	HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+!@HDR@	WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+!@HDR@	FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+!@HDR@	OTHER DEALINGS IN THE SOFTWARE.
+!
+!hist#	2026-03-05 - Christopher.M.Caldwell0@gmail.com - Created
+!#######################################################################
+!doc#	Trivial program SShot written in pil
+!#######################################################################
+     10   ! SShot implemented in Spill by Christopher Caldwell 02/09/83
+     20   ! Untested recently as this was a test program for a compiler
+     30   ! being developed by Rick Daley and myself as class members of the
+     31   ! University of New Hampshire's Computer Science 712
+     35   ! Compiler Design 1980 class with Dr. Robert Russell.
+     40   !
+     50   ! This program plays the not-so-popular game of S-Shot.
+     60   ! It was originally created on the Oyster River High School
+     70   ! PDP-8/e minicomputer, much to the distress of the
+     80   ! faculty.  The object of the game is to destroy the
+     90   ! aproaching space craft (represented by the '<*>').
+    100   ! The user guesses the distance from his own craft
+    110   ! ('[@]').  If he is right, the craft is destroyed,
+    120   ! otherwise, the enemy gets closer.  Eventually,
+    130   ! if the enemy hasn't been destroyed, the user will
+    140   ! be.
+    150   !
+    160   ! Here be the mainline variables
+    170   INT seed ! For random number generator
+    180   INT dist ! Actual distance of enemy
+    190   INT shot ! What he thought the distance was
+    200   INT exlp ! Exit loop flag
+    210   INT ansr ! User's answer
+    220   !
+    230   !
+    240   ! This function is the modulo function so common to other
+    250   ! languages.
+    260   !
+    270   DEF INT mod(IN INT numerator, denominator)
+    280        mod = numerator-denominator*(numerator/denominator)
+    290        IF mod < 0 THEN
+    300             mod = mod+denominator
+    310        ENDIF
+    320   ENDDEF
+    330   !
+    340   !
+    350   ! This function uses the above to create pseudo-random numbers.
+    360   ! Like any good game, this is the heart of the program.
+    370   !
+    380   DEF INT random(INOUT INT seed, IN INT range)
+    390        seed = mod((seed*1234567), 13273)
+    400        random = mod(seed, range)
+    410   ENDDEF
+    420   !
+    430   !
+    440   ! This subroutine prints out N spaces, where N is the argument
+    450   ! supplied.  This routine is used to position the ships in the
+    460   ! display.
+    470   !
+    480   SUB spaceover(IN INT n)
+    490        INT i ! loop index
+    500        FOR i = 1 TO n
+    510             PRINT " ":1,
+    520        NEXT i
+    530   ENDSUB
+    540   !
+    550   !***************** Mainline ********************
+    560   !
+    570   seed = 1234
+    580   PRINT "Welcome to the wonderful game of S-Shot."
+    590   ! Not implimented:  PRINT 'Input your name ',
+    600   ! Not implimented:  INPUT name$
+    610   LOOP
+    620        exlp = 0
+    630        dist = 40+random(seed, 35)
+    640        LOOP
+    650             PRINT
+    660             PRINT "[@]":1,
+    670             spaceover(dist)
+    680             PRINT "<*>"
+    690             PRINT
+    700             PRINT "Input the distance, Captain ", name$,
+    710             INPUT shot
+    720             PRINT "[@]":1,
+    730             IF shot < dist THEN
+    740                  spaceover(shot)
+    750                  PRINT "%":1,
+    760                  spaceover(dist-shot)
+    770                  PRINT "<*>"
+    780                  dist = dist-random(seed, 20)
+    790             ELSE IF shot > dist+2 THEN
+    800                  spaceover(dist)
+    810                  PRINT "<*>":1,
+    820                  spaceover(shot-dist-2)
+    830                  PRINT "%"
+    840                  dist = dist-random(seed, 20)
+    850             ELSE
+    860                  spaceover(shot-6)
+    870                  PRINT "<<<***=Boom=***>>>"
+    880                  exlp = 1
+    890             ENDIF
+    900             IF dist <= 1 THEN
+    910                  PRINT "You have been destroyed."
+    920                  exlp = 1
+    930             ENDIF
+    940        EXIT IF exlp = 1
+    950        ENDLOOP
+    960        PRINT
+    970        ! Not implimented: PRINT """"Do you want to play again? """":1,
+    980        ! Not implimented: INPUT ansr$
+    990        ! EXIT IF ansr$ <> """"yes""""
+   1000        PRINT "Do you want to play again (1=yes, 2=no)":1,
+   1010        INPUT ansr
+   1020   EXIT IF ansr = 2
+   1030   ENDLOOP
+   1040   END
+ 

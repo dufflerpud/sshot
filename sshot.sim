@@ -1,0 +1,99 @@
+#!/bin/make test-sshot_sim
+
+COMMENT indx#	sshot.sim - Trivial program SShot written in Simula
+COMMENT @HDR@	$Id$
+COMMENT @HDR@
+COMMENT @HDR@	Copyright (c) 2026 Christopher Caldwell (Christopher.M.Caldwell0@gmail.com)
+COMMENT @HDR@
+COMMENT @HDR@	Permission is hereby granted, free of charge, to any person
+COMMENT @HDR@	obtaining a copy of this software and associated documentation
+COMMENT @HDR@	files (the "Software"), to deal in the Software without
+COMMENT @HDR@	restriction, including without limitation the rights to use,
+COMMENT @HDR@	copy, modify, merge, publish, distribute, sublicense, and/or
+COMMENT @HDR@	sell copies of the Software, and to permit persons to whom
+COMMENT @HDR@	the Software is furnished to do so, subject to the following
+COMMENT @HDR@	conditions:
+COMMENT @HDR@	
+COMMENT @HDR@	The above copyright notice and this permission notice shall be
+COMMENT @HDR@	included in all copies or substantial portions of the Software.
+COMMENT @HDR@	
+COMMENT @HDR@	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY
+COMMENT @HDR@	KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
+COMMENT @HDR@	WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE
+COMMENT @HDR@	AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+COMMENT @HDR@	HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+COMMENT @HDR@	WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+COMMENT @HDR@	FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+COMMENT @HDR@	OTHER DEALINGS IN THE SOFTWARE.
+COMMENT 
+COMMENT hist#	2026-03-05 - Christopher.M.Caldwell0@gmail.com - Created
+COMMENT #######################################################################
+COMMENT doc#	Trivial program SShot written in Simula
+COMMENT #######################################################################
+COMMENT ////////////////////////////////////////////////////////////////;
+COMMENT SShot implemented in Simula by Chris Caldwell 11/03/2022	;
+COMMENT Tested on cim-5.1.tar.gz					;
+COMMENT ////////////////////////////////////////////////////////////////;
+
+BEGIN
+
+COMMENT ////////////////////////////////////////////////////////////////;
+COMMENT Space over distance spaces and OUTTEXT given string.		;
+COMMENT ////////////////////////////////////////////////////////////////;
+    PROCEDURE redraw_positions ( distance, object_text );
+	INTEGER distance;
+	TEXT object_text;
+	BEGIN
+	OUTTEXT ("]");
+	WHILE distance > 0 DO
+	    BEGIN
+	    distance := distance - 1;
+	    OUTTEXT (" ")
+	    END;
+	OUTTEXT ( object_text );
+	OUTIMAGE
+	END;
+
+COMMENT ////////////////////////////////////////////////////////////////;
+COMMENT Main								;
+COMMENT ////////////////////////////////////////////////////////////////;
+
+    INTEGER spaceship_distance;
+    INTEGER shot_distance;
+    INTEGER seed;
+
+    seed := 0;
+    spaceship_distance := UNIFORM(10,75,seed);
+
+    WHILE spaceship_distance > 0 DO
+	BEGIN
+	redraw_positions( spaceship_distance, "*" );
+	OUTTEXT ("Enter new shot distance: ");
+	BREAKOUTIMAGE;
+	shot_distance := ININT;
+	IF shot_distance < 1 OR shot_distance > 75 THEN
+	    BEGIN
+	    OUTTEXT ("You must enter an integer between 1 and 75." );
+	    OUTIMAGE
+	    END
+	ELSE IF shot_distance = spaceship_distance THEN
+	    BEGIN
+	    redraw_positions( spaceship_distance, "<<Kaboom>>" );
+	    OUTTEXT ("Spaceship destroyed. You win.");
+	    OUTIMAGE;
+	    spaceship_distance := -1
+	    END
+	ELSE
+	    BEGIN
+	    redraw_positions( shot_distance, "." );
+	    spaceship_distance := spaceship_distance - UNIFORM(5,15,seed);
+	    IF spaceship_distance <= 0 THEN
+		BEGIN
+		redraw_positions( 1, "<<Kaboom>>" );
+		OUTTEXT ("Spaceship has collided with you. You lose.");
+		OUTIMAGE;
+		spaceship_distance := -1
+		END
+	    END
+	END
+    END
